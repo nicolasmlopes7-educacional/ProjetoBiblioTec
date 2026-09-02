@@ -219,13 +219,30 @@ a {
     margin-bottom: 50px;
 }
 
+.top-livros {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100px;
+
+    padding: 50px 120px;
+}
+
 .colecao-livros {
-    padding: 100px 120px;
+    padding-bottom: 50px;
 
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-template-columns: repeat(4, 15%);
+    grid-template-columns: repeat(4, auto);
+    gap: 5%;
+}
+
+.livro-textos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
 .livros {
@@ -249,6 +266,7 @@ a {
     align-items: center;
     margin: 20px 0 20px;
 }
+
 
 footer {
     background-color: var(--azul-escuro);
