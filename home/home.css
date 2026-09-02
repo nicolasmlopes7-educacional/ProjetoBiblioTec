@@ -220,10 +220,97 @@ a {
 }
 
 .colecao-livros {
-    margin-top: 100px;
+    padding: 100px 120px;
 
     display: grid;
+    align-items: center;
     justify-content: center;
-    grid-template-columns: repeat(4, 10%);
-    gap: 5%;
+    grid-template-columns: repeat(4, 15%);
+}
+
+.livros {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.livros img {
+    height: 300px;
+}
+
+.livros h3 {
+    text-transform: uppercase;
+    width: 170px;
+    display: grid;
+    align-items: center;
+    margin: 20px 0 20px;
+}
+
+footer {
+    background-color: var(--azul-escuro);
+    height: 40vh;
+    padding: 100px 120px 50px;
+}
+
+.geral {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.informacoes {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 100px;
+    margin-right: 50px;
+}
+
+.informacoes h4 {
+    color: var(--cor-destaque);
+}
+
+
+.informacoes nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.informacoes nav h4 {
+    margin-bottom: 10px;
+    color: var(--cor-destaque);
+}
+
+.logos-redes {
+    display: flex;
+    gap: 30px;
+
+}
+
+footer span {
+    width: 100%;
+    border: 1px solid var(--branco);
+    display: flex;
+    margin: 50px 0;
+}
+
+.ultimo {
+    display: flex;
+    justify-content: space-between;
+    color: var(--branco);
+}
+
+.ultimos nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
 }
