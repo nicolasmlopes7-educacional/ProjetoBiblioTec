@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bibliotec - Gestão de Bibliotecas</title>
-    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="shortcut icon" href="../imgs/Icone - Bibliotec.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
 <body>
@@ -22,6 +24,11 @@
             <a href="#acervo">Nosso acervo</a>
             <a href="#acesso">Login</a>
         </nav>
+
+        <!-- RESPONSIVIDADE -->
+        <button class="botao-menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </header>
     <main>
         <section class="banner-principal">
@@ -130,41 +137,48 @@
     </main>
 
     <footer>
-        <div class="geral">
-            <div class="logos">
-                <img src="../imgs/Logo Horizontal - branca.svg" alt="">
-                <img src="../imgs/SENAI_São_Paulo_logo 1.svg" alt="">
+        <section class="main">
+            <div class="rodape-logos">
+                <img src="../imgs/Logo Horizontal - branca.svg" alt="Bibliotec" />
+                <img src="../imgs/SENAI_São_Paulo_logo 1.svg" alt="SENAI" />
             </div>
-            <div class="informacoes">
-                <nav>
-                    <h4>Biblioteca</h4>
-                    <a href="#">Baixar aplicativo</a>
+
+            <div class="rodape-informacoes">
+                <nav class="nav-footer">
+                    <p>Biblioteca</p>
+                    <a href="#">Baixar aplicativos</a>
                     <a href="#">Suporte ao usuário</a>
                 </nav>
-                <nav>
-                    <h4>Quem somos</h4>
-                    <a href="#">Clientes</a>
+                <nav class="nav-footer">
+                    <p>Quem somos</p>
+                    <a href="# ">Clientes</a>
                     <a href="#">Benefícios</a>
                 </nav>
-                <h4>Siga nas redes sociais</h4>
-                <div class="logos-redes">
-                    <img src="../imgs/icone-facebook.svg" alt="">
-                    <img src="../imgs/icone-instagram.svg" alt="">
-                    <img src="../imgs/icone-linkedin.svg" alt="">
-                </div>
-            </div>
-        </div>
-        <span></span>
-        <div class="ultimo">
-            <p>©Biblio Tec</p>
-            <div class="ultimos">
-                <nav>
-                    <a href="#">Acessibilidade</a>
-                    <a href="#">Política de privacidade</a>
-                    <a href="#">Termos e condições</a>
+                <p>Siga nas redes sociais</p>
+                <nav class="rodape-icones">
+                    <a href="#facebook">
+                        <img src="../imgs/icone-facebook.svg" alt=" Icone do Facebook" />
+                    </a>
+                    <a href="#instagram">
+                        <img src="../imgs/icone-instagram.svg" alt="Icone do Instagram" />
+                    </a>
+                    <a href="#linkedin">
+                        <img src="../imgs/icone-linkedin.svg" alt="Linkedin" />
+                    </a>
                 </nav>
             </div>
-        </div>
+        </section>
+
+        <span></span>
+
+        <section class="footer-inferior">
+            <p>&copy; Biblio Tec</p>
+            <nav class="footer">
+                <a href="#">Acessibilidade</a>
+                <a href="#">Politica de Privacidade</a>
+                <a href="#">Termos e condições</a>
+            </nav>
+        </section>
     </footer>
 </body>
 

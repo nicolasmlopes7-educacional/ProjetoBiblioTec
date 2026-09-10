@@ -1,5 +1,3 @@
-
-
 /* Conteúdo principal */
 
 /* Primeiro banner */
@@ -112,11 +110,13 @@
     align-items: center;
     justify-content: center;
 
-    padding: 80px 20px 50px;/* cima - direita e esquerda - embaixo */
+    padding: 80px 20px 50px;
+    /* cima - direita e esquerda - embaixo */
 
     border: 1px solid var(--azul-escuro);
     border-radius: 30px;
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25);/* x - y - blur - cor com transparência */
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25);
+    /* x - y - blur - cor com transparência */
 
     text-align: center;
     /* Cria referência de posicionamento para o ícone, quando o ícone for posicionado, usa esse card como referência */
@@ -231,69 +231,232 @@
     margin: 20px 0 20px;
 }
 
-
 footer {
     background-color: var(--azul-escuro);
-    height: 40vh;
-    padding: 100px 120px 50px;
+    color: var(--branco);
+    padding: 100px 120px 30px;
 }
 
-.geral {
+.main {
     display: flex;
     justify-content: space-between;
 }
 
-.logos {
+.rodape-logos {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 130px;
 }
 
-.informacoes {
+.rodape-informacoes {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 100px;
-    margin-right: 50px;
 }
 
-.informacoes h4 {
-    color: var(--cor-destaque);
-}
-
-
-.informacoes nav {
+.nav-footer {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
-.informacoes nav h4 {
-    margin-bottom: 10px;
+.nav-footer p {
     color: var(--cor-destaque);
+    margin-bottom: 20px;
+
 }
 
-.logos-redes {
-    display: flex;
-    gap: 30px;
+.nav-footer a {
+    color: var(--branco);
+    margin-bottom: 10px;
+}
 
+.icones {
+    display: flex;
+    gap: 20px;
 }
 
 footer span {
-    width: 100%;
-    border: 1px solid var(--branco);
     display: flex;
     margin: 50px 0;
+    background-color: white;
+    height: 1px;
+    width: 100%;
 }
 
-.ultimo {
+.footer-inferior {
     display: flex;
     justify-content: space-between;
-    color: var(--branco);
 }
 
-.ultimos nav {
+.footer {
     display: flex;
     justify-content: space-between;
     gap: 30px;
 }
 
+.rodape-informacoes p {
+    color: var(--cor-destaque);
+    font-size: 1em;
+    font-weight: 700;
+    width: 100%;
+}
+
+.footer-inferior {
+    display: flex;
+}
+
+/* RESPONSIVIDADE */
+.botao-menu {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    display: none;
+    /* esconde o elemento */
+}
+
+.botao-menu i {
+    font-size: 2em;
+
+    color: var(--branco);
+}
+
+/* RESPONSIVIDADE COM TAMANHOS -> MEDIA QUERY */
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 12px;
+    }
+
+    .cabecalho img {
+        width: 60%;
+    }
+
+    .texto-banner h1 {
+        text-align: center;
+    }
+
+    /* BENEFÍCIOS */
+
+    .beneficios {
+        gap: 50px;
+
+        padding: 30px 0;
+
+        overflow: hidden;
+    }
+
+    .beneficios-lista {
+        grid-template-columns: repeat(3, 30%);
+
+        overflow-x: scroll;
+        /* permite que o objeto role para o lado */
+
+        padding: 50px 20px;
+
+        justify-content: flex-start;
+    }
+
+    .beneficios-lista::-webkit-scrollbar {
+        display: none;
+    }
+
+    .beneficio {
+        padding: 80px 10px 50px;
+    }
+
+    .beneficio h3 {
+        margin-bottom: 25px;
+        width: 60%;
+    }
+
+    .beneficio p {
+        width: 60%;
+    }
+
+    /* BANNER MEIO */
+
+    .banner-meio {
+        background-position: center;
+        padding: 0 30px;
+    }
+
+    .banner-meio .texto-banner {
+        align-items: flex-end;
+    }
+
+    .banner-meio .texto-banner p {
+        text-align: right;
+    }
+
+    /* ACERVO */
+
+    .acervo {
+        padding: 70px 40px;
+        gap: 50px;
+    }
+
+    .colecao-livros {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+        gap: 40px 20px;
+    }
+
+    .livros img {
+        max-width: 100%;
+    }
+
+    .livro h3 {
+        font-size: 1.2em;
+    }
+
+    .livro-texto {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 0 40px;
+
+        position: relative;
+    }
+
+    .botao-menu {
+        /* faz o menu hamburguer aparecer novamente */
+        display: flex;
+    }
+
+    .navegacao {
+        background-color: var(--azul-escuro);
+
+        position: absolute;
+
+        /* distância de 10vh do topo */
+        top: 10vh;
+
+        /* encosta na esquerda */
+        left: 0;
+
+        width: 100%;
+        height: auto;
+
+        padding: 40px;
+
+        border-radius: 0 0 0 30px;
+
+        flex-direction: column;
+        align-items: flex-end;
+
+        gap: 20px;
+
+        /* só funciona com position, quanto maior o z-index, mais pra cima o elemento fica */
+        z-index: 100;
+
+        display: none;
+    }
+
+
+}
