@@ -601,6 +601,7 @@ footer span {
     .rodape-logos {
         align-items: flex-start;
         flex-direction: column;
+        gap: 20px;
     }
 
     .rodape-logos img {
