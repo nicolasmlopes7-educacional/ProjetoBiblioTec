@@ -256,10 +256,11 @@ input[type="checkbox"]:checked::after {
     font-weight: 700;
 }
 
-.status {
+
+.aguardando {
     color: #D34A00;
 }
 
-.status-verde {
+.retirado {
     color: #00A223;
 }
